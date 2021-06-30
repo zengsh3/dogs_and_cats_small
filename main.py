@@ -118,11 +118,10 @@ plt.title('Training and validation loss')
 plt.legend()
 plt.savefig(fname='smoothed picture.png')
 
-'''
+
 test_generator = test_datagen.flow_from_directory(test_dir,target_size=(150,150),
                                                   batch_size=20,class_mode='binary')
 
 model=load_model('cats_and_dogs_small_20210701.h5')
 test_loss,test_acc = model.evaluate_generator(test_generator,steps=50)
 print('test_acc:',test_acc)
-'''
