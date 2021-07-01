@@ -1,0 +1,10 @@
+FROM tensorflow/tensorflow:2.1.0-gpu-py3
+WORKDIR /dogs_and_cats_small
+
+RUN pip install tensorflow
+RUN pip install --upgrade pip
+RUN pip install keras
+RUN pip install numpy
+RUN pip install matplotlib
+
+CMD python3 /kw_resources/dogs_and_cats_small/main.py
